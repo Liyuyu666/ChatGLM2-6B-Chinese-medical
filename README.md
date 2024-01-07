@@ -174,6 +174,8 @@ output:  "处方药"
 # 5.总结
 在本项目中，基于LLaMA-Factory项目对ChatGLM2-6B-Chat模型进行了指令监督微调，对LLM的指令微调有了进一步的学习和实践，尝试使用QLoRA和Flash Attention技术优化了推理速度，最后，从感兴趣的探索方向出发，对ChatGLM2-6B-Chat进行了中文医疗方向的指令微调。
 
+>下载本项目后，可直接添加适配器（saves/ChatGLM2-6B-Chat/lora路径下的train开头的文件）加载微调后的模型
+
 >具体在技术报告中
 
 
