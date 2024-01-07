@@ -4,6 +4,8 @@
 # 项目概况
 LLaMA-Factory是大模型训练和评估的平台，整合了目前主要的开源大模型，包含Baichuan、BLOOM、ChatGLM3、LLaMA、Qwen等，可以使用可视化界面实现模型训练和评估。本项目基于LLaMA-Factory，使用单GPU训练，对基座模型ChatGLM2-6B-Chat进行指令监督微调和推理效率优化，并且基于自己的研究方向在医疗方面进行了微调，实现了自己的Chat机器人。
 
+>下载本项目和ChatGLM2-6B-Chat模型后，在可视化页面选择模型并添加适配器（saves/ChatGLM2-6B-Chat/lora路径下的train开头的文件）加载微调后的模型。
+
 # 1.基座模型
 基座模型选择ChatGLM2-6B-Chat。ChatGLM2-6B是开源中英双语对话模型ChatGLM-6B的二代版本，使用GLM的混合目标函数，经过了1.4T中英标识符的预训练与人类偏好对齐训练，相关评测结果显示，它保留了初代模型的众多优秀特性，同时性能有了大幅提升，此外，基于Multi-Query Attention技术，ChatGLM2-6B-Chat有更高效的推理速度和更低的显存占用。除ChatGLM2-6B-Chat的性能优势外，选择的另一个原因是孙思邈中文医疗大模型Sumsimiao是基于Baichuan-7B和ChatGLM-6B在中文医疗数据上微调而得，参考已有的成果，在项目中也将对ChatGLM2-6B进行中文医疗方向的微调。
 ```c
@@ -174,9 +176,7 @@ output:  "处方药"
 # 5.总结
 在本项目中，基于LLaMA-Factory项目对ChatGLM2-6B-Chat模型进行了指令监督微调，对LLM的指令微调有了进一步的学习和实践，尝试使用QLoRA和Flash Attention技术优化了推理速度，最后，从感兴趣的探索方向出发，对ChatGLM2-6B-Chat进行了中文医疗方向的指令微调。
 
->下载本项目后，可直接添加适配器（saves/ChatGLM2-6B-Chat/lora路径下的train开头的文件）加载微调后的模型
-
->具体在技术报告中
+>测试结果具体在技术报告中。
 
 
 
